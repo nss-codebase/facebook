@@ -43,5 +43,13 @@ describe('User', function(){
       });
     });
   });
+
+  describe('.findOne', function(){
+    it('should find a specific user', function(){
+      User.findOne({email:'bob@aol.com', isVisible:true}, function(err, user){
+        expect(user.email).to.equal('bob@aol.com');
+      });
+    });
+  });
 });
 
