@@ -35,6 +35,10 @@ User.authenticate = function(o, cb){
   });
 };
 
+User.find = function(filter, cb){
+  User.collection.find(filter).toArray(cb);
+};
+
 User.prototype.save = function(o, cb){
   var properties = Object.keys(o),
       self       = this;

@@ -22,13 +22,6 @@ describe('User', function(){
     });
   });
 
-  describe('constructor', function(){
-    it('should create a new User object', function(){
-      var u = new User();
-      expect(u).to.be.instanceof(User);
-    });
-  });
-
   describe('#save', function(){
     it('should save a user', function(){
       var u = new User(),
@@ -39,6 +32,14 @@ describe('User', function(){
         expect(user.isVisible).to.be.true;
         expect(user.foo).to.equal('bar');
         expect(user.baz).to.equal('bim');
+      });
+    });
+  });
+
+  describe('.find', function(){
+    it('should find users who are public', function(){
+      User.find({isVisible:true}, function(err, users){
+        expect(users).to.have.length(2);
       });
     });
   });
