@@ -78,7 +78,7 @@ describe('users', function(){
       .end(function(err, res){
         expect(res.status).to.equal(200);
         expect(res.text).to.include('bob@aol.com');
-        expect(res.text).to.include('sam@aol.com');
+        expect(res.text).to.include('nodetester@yahoo.com');
         expect(res.text).to.not.include('sue@aol.com');
         done();
       });
@@ -117,7 +117,7 @@ describe('users', function(){
       .send('mtype=text&message=hey')
       .end(function(err, res){
         expect(res.status).to.equal(302);
-        expect(res.headers.location).to.equal('/users/sam@aol.com');
+        expect(res.headers.location).to.equal('/users/nodetester@yahoo.com');
         done();
       });
     });

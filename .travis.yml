@@ -13,8 +13,9 @@ after_script:
   - npm run coveralls
 env:
   global:
-    - DEBUG=1
     - secure: "higdp7vEvZdw6bI6/EFzBJMTsRo4JE1Nn6LTkE79d0Rv5PpI4WwXOt2JX5JkSaUL/uK0QmS85hHbd+ClExdwAbrmEwZf9P5wSJEFJ8SrXB9qwnoC6eMB3cIJBxb+7om1OhQaTh9qWEJWfaOcrTgx2Uc0gaqnVuCInE+v9pKIUsw="
     - secure: "X9DntYEBLnW4kfGLHkN9Cv2VAPHbQDLTKan3/hJ1dPDurCsW9ycK3r1UdV3TE0Ujs/OeCFFOdIBNC2udzrWozypUgD4uO4MTHMew3sNWSRMK+RGIIXlciuwF7Zgohc7f3RSm9fNg6bxkDuM7F5rNysvm0mxDHVxxorOYiPD1mLs="
     - secure: "FQfwgDJHLBUXXxCjXL4dgvjcb50Gtao01xYzruNMN1Py/QjYd23k8wq4Qyriv1h/wF6ikw86DRfSxIHaLkwJAJjCd+cMUBnzfa4XSufI5UG65srM2RqQNE641lRCMcnSlvPlQ0e3xGbZ3d8HYdVV31SZmzaTqxFOgEcJF6jm1ZQ="
+    - secure: "SYJkR8Xc+jmY8OVJNMviJ1aFIB7m5yxzTwiMPZmy45JjrtdhcRXgkF/kFbJ+0zyITYI3PFMZ47sQBvRc4odXF/rQO8VY0YwGM7OsHECNQ5MoVeCs2gxK61bZIMn5hcTFyEwjs5cOpeactf0LiP/D8h2sp/J2/vA5EHZd3y8SBXU="
+    - secure: "Kl/SjY/P323pYh5scg7STijHBvEmmkgm+5z7QVy6yREn9V01CB9yiDvYdWNxc77glUKlWG1wqTh5G+n9tPB3X9auzQb7xRTMD0WBNoo7LyFu4gSVOOFbUV967Qt65bj8+qvxfltO0rePVYKTSvBUYX0cKp5HPPnpziYRxqxYcVU="
 
