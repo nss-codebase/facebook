@@ -13,6 +13,9 @@
         if user
           li: a(href='/users') Users
           li: a(href='/profile') Profile
+          li: a(href='/messages')
+            span Messages &nbsp;
+            span.badge= user.unread
           li
             form.navbar-form(method='post', action='/logout')
               .form-group

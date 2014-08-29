@@ -109,10 +109,10 @@ describe('users', function(){
     });
   });
 
-  describe('post /message/3', function(){
+  describe('post /messages/3', function(){
     it('should send a user a message', function(done){
       request(app)
-      .post('/message/000000000000000000000002')
+      .post('/messages/000000000000000000000002')
       .set('cookie', cookie)
       .send('mtype=text&message=hey')
       .end(function(err, res){

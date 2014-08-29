@@ -1,0 +1,20 @@
+extends ../shared/template
+block content
+  .row
+    .col-xs-6
+      table.table.table-hover.table-bordered
+        thead
+          tr
+            th From
+            th Date
+            th Message
+        tbody
+          each msg in msgs
+            tr(style='background-color:#{msg.isRead ? "#eeeeee" : "#aaaaaa"} !important;')
+              td: a.btn.btn-warning.btn-xs(href='/users/#{msg.sender.email}')= msg.sender.email
+              td= msg.date.toDateString()
+              td: a.btn.btn-primary.btn-xs(href='/messages/#{msg._id}')= msg.message.slice(0, 10)
+    .col-xs-6
+
+block scripts
+

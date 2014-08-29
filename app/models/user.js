@@ -4,7 +4,8 @@ var bcrypt  = require('bcrypt'),
     Mongo   = require('mongodb'),
     _       = require('lodash'),
     twilio  = require('twilio'),
-    Mailgun = require('mailgun-js');
+    Mailgun = require('mailgun-js'),
+    Message = require('./message');
 
 function User(){
 }
@@ -45,6 +46,14 @@ User.findOne = function(filter, cb){
   User.collection.findOne(filter, cb);
 };
 
+User.prototype.unread = function(cb){
+  Message.unread(this._id, cb);
+};
+
+User.prototype.messages = function(cb){
+  Message.messages(this._id, cb);
+};
+
 User.prototype.save = function(o, cb){
   var properties = Object.keys(o),
       self       = this;
@@ -71,6 +80,7 @@ User.prototype.send = function(receiver, obj, cb){
       sendEmail(this.email, receiver.email, 'Message from Facebook', obj.message, cb);
       break;
     case 'internal':
+      Message.send(this._id, receiver._id, obj.message, cb);
   }
 };
 
