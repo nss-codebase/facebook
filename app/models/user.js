@@ -68,6 +68,7 @@ User.prototype.save = function(o, cb){
     }
   });
 
+  delete this.unread;
   User.collection.save(this, cb);
 };
 
